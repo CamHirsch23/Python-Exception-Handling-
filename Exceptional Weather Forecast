@@ -1,0 +1,32 @@
+# Module docstring
+"""This module converts temperatures from Fahrenheit to Celsius."""
+
+# Task 1: Asking for Temperature Input
+input_temperature_fahrenheit =input("Please enter the temperature in Fahrenheit: ")
+
+
+# Task 2: Temperature Conversion
+def convert_to_celsius(fahrenheit_temp):
+    """Convert a temperature from Fahrenheit to Celsius."""
+    try:
+        celsius_temp = (float(fahrenheit_temp) - 32) * 5/9
+    except ValueError:
+        print("Invalid input. Please enter a valid temperature in Fahrenheit.")
+        return None
+    else:
+        return celsius_temp
+
+
+# Two blank lines after the function definition as per PEP 8 standards
+
+
+# Task 3: User Experience
+output_temperature_celsius = convert_to_celsius(input_temperature_fahrenheit)
+if output_temperature_celsius is not None:
+    print(f"{input_temperature_fahrenheit} degrees Fahrenheit is "
+          f"{output_temperature_celsius:.2f} degrees Celsius.")
+
+# Task 4: Finally
+print("Thank you for using the weather forecast application!")
+
+# Newline at the end of the file
